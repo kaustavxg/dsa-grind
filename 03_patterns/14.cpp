@@ -12,7 +12,7 @@ A B C D E
 void print14(int n){
     for(int i = 1; i <= n; i++){
         // i = 2 
-        for(char ch = 'A'; ch <= 'A' + i; ++){
+        for(char ch = 'A'; ch <= 'A' + i; i++){
             cout << ch << " ";
         }
         cout << endl;
