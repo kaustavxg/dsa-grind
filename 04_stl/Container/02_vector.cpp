@@ -30,13 +30,13 @@ void explainVector(){
     vector<int> v;
 
     // Adding a new element to the vector. 'push_back' adds the value '1' to the end.
-    v.push_back(1); // v now contains: {1}
+    v.push_back(1); //# v now contains: {1}
 
-    // 'emplace_back' is another way to add an element. It's often more efficient.
+    //# 'emplace_back' is another way to add an element. It's often more efficient.
     // It directly constructs the element inside the vector's memory, avoiding a copy operation.
     v.emplace_back(2); // v now contains: {1, 2}
 
-    // Why is 'emplace_back' faster than 'push_back'?
+    //! =============== Why is 'emplace_back' faster than 'push_back'? ===============
     // 'push_back' first creates a temporary object and then copies it into the vector.
     // 'emplace_back' constructs the object directly in the vector's memory, which is faster, especially for complex objects.
 
@@ -49,7 +49,9 @@ void explainVector(){
     // With 'emplace_back', you just pass the values, and it builds the pair on the spot.
     vec.emplace_back(1, 2);
 
-    // How to create a vector with a specific size and default values
+    //! ==============================================================================
+
+    //! ======= How to create a vector with a specific size and default values =======
     vector<int> vect(5, 100); // This creates a vector with 5 elements, all set to 100.
     // vect will be: {100, 100, 100, 100, 100}
 
@@ -62,9 +64,9 @@ void explainVector(){
     vector<int> v1(5, 20); // v1 is: {20, 20, 20, 20, 20}
     vector<int> v2(v1);   // v2 is now a copy of v1: {20, 20, 20, 20, 20}
 
-    // ========== Iterators ==========
+    //! =================================== Iterators ===================================
     // An iterator is a pointer-like object that points to an element in a container.
-    // It doesn't hold the value itself, but its memory address.
+    //# It doesn't hold the value itself, but its memory address.
     vector<int>::iterator it = v.begin(); // 'v.begin()' returns an iterator pointing to the first element.
 
     // Move the iterator to the next element.
@@ -99,7 +101,7 @@ void explainVector2()
     }
 
     // A more modern and readable way to write the same loop using 'auto'.
-    // The 'auto' keyword automatically figures out the data type.
+    //# The 'auto' keyword automatically figures out the data type.
     // For example, if you write 'auto a = 5', the compiler knows 'a' is an integer.
     // In this case, 'auto' correctly identifies 'it' as 'vector<int>::iterator'.
     for(auto it = v.begin(); it != v.end(); it++){
@@ -128,7 +130,7 @@ void vectorDelete(){
     // End: begin+3 (40 ka position, lekin 40 delete nahi hoga)
     // Result: {10, 40, 50}
 
-    // Dhyan do: end position include NAHI hota deletion mein
+    //! Dhyan do: end position include NAHI hota deletion mein
     // [start, end) - start include, end exclude
 
     // Agar non-continuous delete karna hai (jaise 20 aur 40)
@@ -156,7 +158,7 @@ void vectorInsert(){
     // {300, 10, 10, 20, 100, 100}
 
     // now i want to insert two number at a random index
-    //# syntax: v.insert(<position>, <number of elements i want to add>, <value to insert>)
+    //? syntax: v.insert(<position>, <number of elements i want to add>, <value to insert>)
     //# example: v.insert(v.begin()+2,  3,     99) 
     //                     ↑ position   ↑count ↑value
     //           means index 2 pe, 3 times, 99 insert karo

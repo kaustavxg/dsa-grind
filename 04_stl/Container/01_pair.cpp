@@ -19,9 +19,38 @@ void explainPair(){
     pair<int, int> arr[] = { {1, 2}, {3, 4}, {4, 5} };
 
     cout << "arr[0].first: " << arr[0].first << endl;
+
+}
+
+void explainPair2(){
+
+
+    // Pair lets you store TWO different data types together in one container
+    // Like a box that can hold one integer AND one character at the same time
+    // Syntax: pair<first_type, second_type> name = {value1, value2};
+
+    pair<int, char> pa = {1, 'a'};
+
+    cout << "pa.first: " << pa.first << endl;    // Prints: 1 (the integer)
+    cout << "pa.second: " << pa.second << endl;  // Prints: a (the character)
+
+    // Real-world examples:
+    pair<string, int> student = {"Rahul", 85};     // Name and marks
+    cout << "student name: " << student.first << endl;
+    cout << "student marks: " << student.second << endl;
+
+    pair<int, string> employee = {101, "Manager"}; // ID and designation
+    cout << "employee ID: " << employee.first << endl;
+    cout << "employee designation: " << employee.second << endl;
+
+    pair<double, bool> product = {199.99, true};   // Price and availability
+    cout << "product price: " << product.first << endl;
+    cout << "product availability: " << product.second << endl;
 }
 
 int main(){ 
     explainPair();
+    cout << "=========================== end of function 1 ===========================" << endl;
+    explainPair2();
     return 0;
 }
