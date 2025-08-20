@@ -2,7 +2,7 @@
 using namespace std;
 
 /*
-print N -> using backtracking
+#print N -> using backtracking
 
 ! using i-1 is not allowed in printBackTracking()
 */
