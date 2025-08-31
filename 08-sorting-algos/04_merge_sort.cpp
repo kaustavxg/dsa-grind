@@ -34,14 +34,12 @@ void merge(int arr[], int low, int mid ,int high){
         arr[i] = temp[i - low];
     }
 
-
-
 }
 
-void mergeSort(int arr[], int n, int low, int high){
+void mergeSort(int arr[], int low, int high){
 
     // base case
-    if(low == high) return;
+    if(low >= high) return;
 
     int mid = (low+high)/2;
 
@@ -58,15 +56,15 @@ int main(){
     cin >> n;
 
     int arr[n];
+    cout << "enter elements: ";
     for(int i = 0; i < n; i++){
-        cin >> i;
+        cin >> arr[i];
     }
 
     mergeSort(arr, 0, n-1);
-    merge(arr, n)
-
+    
     for(int i = 0; i < n; i++){
-        cout << i << " ";
+        cout << arr[i] << " ";
     }
 
     cout << endl;
