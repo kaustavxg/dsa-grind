@@ -46,7 +46,10 @@ void bruteForce1_left_rotate_d_place(int arr[], int n, int k){
 //   But bruteForce1 gives an incorrect output since it doesn’t handle k > n.
 
 void bruteForce2(int arr[], int n, int k){
-
+    int temp = arr[0];
+    for(int i = k; i < n; i++){
+        arr[i-k] = arr[i];
+    }
 }
 
 void optimal_approach(int arr[], int n, int k){
