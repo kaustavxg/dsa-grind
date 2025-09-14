@@ -24,7 +24,6 @@ Example 3:
 Input: nums = [3,3], target = 6
 Output: [0,1]
 */
-
 int twoSum(int arr[], int n, int target){
     for(int i = 0; i < n-1; i++){
         for(int j = i+1; j < n; j++){
