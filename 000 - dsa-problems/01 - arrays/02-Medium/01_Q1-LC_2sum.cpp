@@ -24,14 +24,12 @@ Example 3:
 Input: nums = [3,3], target = 6
 Output: [0,1]
 */
-int twoSum(int arr[], int n, int target){
+pair<int, int> twoSum(int arr[], int n, int target){
     for(int i = 0; i < n-1; i++){
         for(int j = i+1; j < n; j++){
             if(arr[i] + arr[j] == target){
-                return (i, j);
+                return {i, j}; // return indices
             }
-            cout << "i: " << i << endl;
-            cout << "j: " << j;
         }
     }
     return {};
@@ -52,7 +50,12 @@ int main(){
     cout << "enter target value: ";
     cin >> target;
 
-    int mySum = twoSum(arr, n, target);
+    pair<int, int> result = twoSum(arr, n, target);
 
-    cout << "two numbers are: " << mySum << endl;
+    if(result.first != -1) {
+        cout << "indices: " << result.first << ", " << result.second << endl;
+        cout << "elements: " << arr[result.first] << ", " << arr[result.second] << endl;
+    } else {
+        cout << "No such pair found!" << endl;
+    }
 }
